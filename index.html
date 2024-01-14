@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legendary</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="shortcut icon" href="Startpageasset/cutlery.png" type="image/x-icon">
+  </head>
+  <body style="background-color: #690514ff">
+    <div id="randomDiv">
+      <img id="randomImage" src="" alt="Random Image" />
+      <p id="randomName">Random Name</p>
+      <button id="referButton">D i s c o v e r</button>
+    </div>
+    <div id="mobilein">
+      <i class="material-symbols-outlined" onclick="Close();" id="closeBtn_mobile">close</i>
+      <p style="color: aliceblue;">Ingredients</p>
+      <div style="color: aliceblue" id="popupMobile"></div>
+    </div>
+    <!-- page1 -->
+    <div id="page1" class="page">
+      <div id="introvideo">
+        <video
+          id="introvideosrc"
+          src="Startpageasset/intro.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+
+      <div id="topnav">
+        <ul>  
+          <li><a href="">HOME</a></li>
+          <li><a id="randomMealSection"  onclick="event.preventDefault(); scrollToTop();">RANDOM MEAL SECTION</a></li>
+          <li><a  onclick="event.preventDefault();mBtn();" href="">MENU</a></li>
+          <li><a href="https://www.linkedin.com/in/r-dhana-rooban-5441b2283/" target="_blank">ABOUT US</a></li>
+        </ul>
+      </div>
+
+      <section class="wrapper">
+        <div class="top">WELCOME</div>
+        <div class="bottom" aria-hidden="true">WELCOME</div>
+      </section>
+
+      <div id="txt">
+        <div id="words">LEGENDARY RESTAURANT</div>
+        <div id="lineimgdiv">
+          <img id="lineimg" src="Startpageasset/line.png" alt="" />
+        </div>
+        <div id="slogan">
+          "INSTANT INDULGENCE: UNLEASH YOUR APPETITE, SAY GOODBYE TO TABLE-TIME
+          WAITS!"
+        </div>
+      </div>
+
+      <button  onclick="scrollToTop()"  id="ScrollBtn">
+        <img id="scroll-down-btn" src="Startpageasset/down-arrow.png" alt="" />
+      </button>
+    </div>
+
+    <!-- page2 -->
+    
+    <div class="pg2_txt_content">
+      <div class="top-img">
+        <img src="Startpageasset/line.png" alt="" />
+      </div>
+      <div class="bottom-image">
+        <img src="Startpageasset/line.png" alt="" />
+      </div>
+      <div class="pg_txt">
+        <h2 id="randomintro">
+          INTRODUCING THE ELIGHT: UNLEASH THE FLAVOR WITH OUR RANDOM FOOD
+          GENERATOR!
+        </h2>
+        <p id="pararandom">
+          "NO MORE DILEMMAS ON WHAT TO COOK – LET SPONTANEITY GUIDE YOUR
+          CULINARY ADVENTURE. DIVE INTO A TREASURE TROVE OF COOKING ARTICLES TO
+          MASTER YOUR SKILLS. AND, FOR THE ULTIMATE DINING EXPERIENCE, SUMMON
+          OUR RESIDENT CHEF WITH YOUR SELECTED RECIPE! ORDER SEAMLESSLY AND
+          ENJOY A TABLE-FREE WAIT, AS YOUR PERSONALIZED DISH TAKES CENTER STAGE.
+          ELEVATE YOUR DINING MOMENTS WITH OUR INNOVATIVE APPROACH – WHERE
+          CHOICE MEETS CULINARY DELIGHT!"
+        </p>
+      </div>
+      <div style="transform: rotate(90deg)" class="right-img">
+        <img src="Startpageasset/line.png" alt="" />
+      </div>
+      <div style="transform: rotate(90deg)" class="left-img">
+        <img src="Startpageasset/line.png" alt="" />
+      </div>
+    </div>
+  
+    <div class="second-page">
+      <div id="pop_content" class="content">
+        <i class="material-symbols-outlined" onclick="closeGuideW()" id="closeButton">close</i>
+        <p id="poptxt">REFER:</p>
+        <div id="pop_inside_content">
+          <a id="youtubeLink" target="_blank" link.href="">
+            <img
+              src="Startpageasset/youtube.png"
+              alt="Image Description"
+              class="icon"
+            />
+          </a>
+          <a id="alink" target="_blank" alink.href="">
+            <img
+              src="Startpageasset/art.png"
+              alt="Image Description"
+              class="icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="card_down_btn">
+        <button class="pushable" onclick=" RandomFood()" id="refreshButton">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">Discover Delicious ingredients</span>
+        </button>
+
+        <button class="pushable" id="learn-btn" onclick= "event.preventDefault();displayGuide();">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">Guide to Cookify</span>
+        </button>
+      </div>
+   
+
+      <div class="card">
+        <div class="imgBox" id="imgBox"></div>
+        <div class="details">
+          <h2
+            id="name"
+            style="
+              font-family: 'Lora', serif;
+              color: rgb(255, 189, 36);
+              text-transform: uppercase;
+              top: 0%;
+            "
+          >
+            lorem ipsum dolor
+          </h2>
+          <h2>
+            <p>INGREDIENT</p>
+          </h2>
+          <p id="instruction"></p>
+          <div style="color: aliceblue" id="popup"></div>
+        </div>
+      </div>
+    </div>
+    <!-- page3 -->
+    <div id="pg-3">
+      <div id="search_bar" class="search-container">
+        <input
+          id="myInputField"
+          class="search-input"
+          type="text"
+          placeholder="EXPLORE"
+        />
+      </div>
+      <div id="container"></div>
+      <div id="food"></div>
+    </div>
+    <!-- links -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="scrip.js"></script>
+  </body>
+</html>
